@@ -1,0 +1,184 @@
+<HTML>
+	<head>
+		<TITLE>SmashingTheStack.org!</TITLE>
+		<meta name="description" content="OpenSource software and other stuff for all your hacky needs!">
+		<meta name="keywords" content="programming, hacking, screencasting, random stuff, security, software">
+		<style type="text/css">ol{margin:0;padding:0}.c5{color:inherit;text-decoration:inherit}.c7{color:#000099;text-decoration:underline}.c2{font-weight:bold}.c6{font-style:italic}.c1{height:11pt}.c0{direction:ltr}.c4{text-indent:36pt}body{color:#000000}</style>
+	</head>
+		<BODY BACKGROUND="/shared/images/background.jpg" BGCOLOR="#fefefe" TEXT="#000000" LINK="#000000" VLINK="#000000" ALINK="#000000" class="c3">
+			<CENTER>
+				<TABLE BORDER="0" WIDTH="85%" CELLSPACING="0" CELLPADDING="0">
+					<TR>
+						<TD COLSPAN="3">
+							<TABLE WIDTH="95%" CELLSPACING="0" CELLPADDING="0">
+								<TR>
+									<TD ALIGN="center" VALIGN="bottom" WIDTH="55%">
+										<TABLE WIDTH="80%" CELLPADDING="0">
+											<TR>
+												<TD BGCOLOR="#000000">
+													<TABLE WIDTH="100%" CELLPADDING="6">
+														<TR>
+															<TD BGCOLOR="#fefefe">
+																<CENTER><B>Tutorials - Security</B></CENTER>
+															</TD>
+														</TR>
+													</TABLE>
+												</TD>
+											</TR>
+										</TABLE>
+									</TD>
+									<TD VALIGN="bottom" ALIGN="right">
+										<TABLE CELLPADDING="0">
+											<TR>
+												<TD BGCOLOR="##000000">
+													<TABLE CELLPADDING="0">
+														<TR>
+															<!-- Upper right corner, site logo? -->
+															<!-- <TD BGCOLOR="#ffffff">
+																<A HREF="/index.html"><IMG SRC="/grfx/shared/slackware1337.gif" ALT="Slackware Logo" BORDER="0"></A>
+																
+															</TD> -->
+														</TR>
+													</TABLE>
+												</TD>
+											</TR>
+										</TABLE>
+									</TD>
+								</TR>
+								<TR>
+									<TD COLSPAN="2">
+										<BR>
+									</TD>
+								</TR>
+							</TABLE>
+						</TD>
+					</TR>
+					<TR VALIGN="top">
+						<TD WIDTH="10%">
+							<TABLE WIDTH="100%" CELLPADDING="0">
+								<TR>
+									<TD BGCOLOR="#000000">
+										<!-- SideBar -->
+										<TABLE WIDTH="100%" CELLPADDING="0">
+											<TR>
+												<TD BGCOLOR="#000000">
+													<TABLE WIDTH="100%" CELLPADDING="14">
+														<TR>
+															<TD BGCOLOR="#fefefe">
+																<FONT SIZE="-1">
+																	<B><A HREF="/index.html">News</A><P></B>
+																	<A HREF="/whoami.html"># whoami</A><P>
+																</FONT>
+															</TD>
+														</TR>
+													</TABLE>
+												</TD>
+											</TR>
+										</TABLE>
+										
+										
+										<TABLE WIDTH="100%" CELLPADDING="14">
+											<TR>
+												<TD BGCOLOR="#fefefe">
+													<FONT SIZE="-1"><B>
+														<A HREF="/tutorials/">Tutorials</A><P></b>
+														<li><a href="/tutorials/programming/">Programming</a><br>
+														<li><a href="/tutorials/networking/">Networking</a><br>
+														<!-- <a href="hacking/">Grey Hat Hacking</a> -->
+														<!-- Good! You can think! :D -->
+														<li><a href="/tutorials/moron.html">Gray Hat Hacking</a><br>
+														<li><a href="/tutorials/hardware/">Hardware Hacking</a><br>
+														<b><li><a href="/tutorials/security/">Security</a></b>
+													</FONT>
+												</TD>
+											</TR>
+										</TABLE>
+									</TD>
+								</TR>
+							</TABLE>
+														
+							<TABLE WIDTH="100%" CELLPADDING="0">
+								<TR>
+									<TD BGCOLOR="#000000">
+										<!-- SideBar -->
+										<TABLE WIDTH="100%" CELLPADDING="14">
+											<TR>
+												<TD BGCOLOR="#fefefe">
+													<FONT SIZE="-1"><B>
+														<A HREF="/coding/">Code</A><P>
+														<A HREF="/essays/">Essays</A><P>
+														<A HREF="/tools.html">Tools</A><P>
+														<A HREF="/links.html">Links</A><P>
+														<A HREF="/reading.html">Books and Papers</A><P>
+														<A HREF="/contact.html">Contact</A></B>
+													</FONT>
+												</TD>
+											</TR>
+										</TABLE>
+									</TD>
+								</TR>
+							</TABLE>
+							
+							<P>	
+						</TD>
+						<TD> &nbsp; </TD>
+						<TD>
+						
+						<!-- News starts here -->
+							<CENTER>					
+								<TABLE BORDER="0" WIDTH="100%" CELLSPACING="0" CELLPADDING="0">
+									<TR>
+										<TD COLSPAN="2">
+											<TABLE WIDTH="100%" CELLPADDING="0">
+												<TR>
+													<TD BGCOLOR="#000000">
+														<TABLE WIDTH="100%" CELLPADDING="4">
+															<TR>
+																<TD BGCOLOR="#fefefe">
+																	&nbsp;<B> Two Factor Authentication with Google-Authentication<B>
+																</TD>
+															</TR>
+														</TABLE>
+													</TD>
+												</TR>
+											</TABLE>
+										</TD>
+									</TR>
+									<TR>
+										<TD VALIGN="top">
+											<TABLE WIDTH="100%" CELLPADDING="0">
+												<TR>
+													<TD BGCOLOR="#000000">
+														<TABLE WIDTH="100%" CELLPADDING="14">
+															<TR>
+																<TD BGCOLOR="#fefefe">
+																	<p class="c0"><span>Two factor authentication is the idea of having two different passwords to be able to log in into a system. One is your regular password and the other is the either a time token or a count token (there are many other methods besides these two) which generate a one time random number which is required to be able to log in. </span></p><p class="c1 c0"><span></span></p><p class="c0"><span>At my work we use RSA&rsquo;s SecurID token. This token is a time-based token and will generate a new code every 30 seconds. When I&rsquo;m asked to log in (via SSH for example) into a remote system, it will ask my password followed by the number the token generated. This adds a layer of security on servers and prevents bruteforce attacks. However, this will not prevent any attacks which the attacker has somehow access to the token which generates this one time series of digits. Nonetheless it&rsquo;s a good idea to implement this solution. However RSA&rsquo;s solution can be quite expensive since it requires certain devices (such as a capable Cisco router... not the small ones you buy at BestBuy) and is not really suitable for home power-users such as myself.</span></p><p class="c1 c0"><span></span></p><p class="c0"><span>This is where Google comes and saves the day with it&rsquo;s evil Sith empire. If you&rsquo;re reluctant in using Google products, please read my other tutorial on how to implement SSH Duo on OpenSSH. Below are the pre-requisistes for this implementation:</span></p><p class="c1 c0"><span></span></p><p class="c0"><span>- Linux Server with PAM module capabilities</span></p><p class="c0"><span>- OpenSSH</span></p><p class="c0"><span>- A Smartphone (Android, Blackberry or iPhone)</span></p><p class="c1 c0"><span></span></p><p class="c0"><span>Note: The Linux portion of this will be done under Ubuntu since it&rsquo;s the most common distribution of them all. If you&rsquo;re a hardcore Slackware guy like myself, you know how &nbsp;to compile your stuff from source or look in the slackware repos. If you&rsquo;re a Red Hat user, then you are not even a real person so I&rsquo;m not even going to bother ;)</span></p><p class="c1 c0"><span></span></p><p class="c0"><span>Also, I do everything as the root user because I know what I&rsquo;m doing. If you don&rsquo;t know what you&rsquo;re doing, make sure to use </span><span class="c2">sudo</span><span>.</span></p><p class="c1 c0"><span></span></p><p class="c0"><span class="c2">Step 1 - Configuring the Smartphone</span></p><p class="c1 c0"><span></span></p><p class="c0"><span>This is the simplest of all the steps. Go on your phone and install the &ldquo;Google Authenticator&rdquo; application off the appropriate market (in my case it was the Android Market)</span></p><p class="c1 c0"><span></span></p><p class="c0"><span><p><img src="/tutorials/security/2fa_auth/pictures/google_auth_android.JPG" height="600"></span></p><p class="c0 c1"><span></span></p><p class="c0"><span>You&rsquo;re done for now on the smarthphone side.</span></p><p class="c1 c0"><span></span></p><p class="c0"><span class="c2">Step 2- Installing the appropriate packages</span></p><p class="c1 c0"><span class="c2"></span></p><p class="c0"><span>We&rsquo;ll begin by installing the packages we need. Type the following:</span></p><p class="c0"><span># apt-get install mercurial meld libpam0g-dev pibpam-devperm ntp qrencode libqrencode3</span></p><p class="c0"><span class="c2">Mercurial &amp; Meld:</span></p><p class="c0"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;These are required for downloading the source from google. You can do it manually but I like going at it with this method. Keep it simple stupid.</span></p><p class="c1 c0"><span></span></p><p class="c0"><span class="c2">libpam0g-dev &amp; pibpam-devperm:</span></p><p class="c0 c4"><span>These are the PAM libraries required by Google for this to work.</span></p><p class="c1 c0"><span></span></p><p class="c0"><span class="c2">ntp:</span></p><p class="c0"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Network Time Protocol. Since we&rsquo;re using a time-base token, ntp will synchronize the time with the ubuntu ntp server (by default) which will help the google-authenticator to not be out of sync.</span></p><p class="c1 c0"><span></span></p><p class="c0"><span class="c2">qrencode &amp; libqrencode3:</span></p><p class="c0 c4"><span>These are optional but are fairly useful. When you generate the code for your smartphone, it will print out a link which you will be required to visit so that you may enter a code in the google-authenticator app on your smartphone OR alternatively, if you have QR Encoding installed on your system, then in the shell it will print out the QR Code from which you can scan it with your phone. Again, keep it simple. But these are optional, do try to avoid implementing useless packages in production systems (say at work) or applications which could potentially be exploited by a malicious. Your call really.</span></p><p class="c1 c0 c4"><span></span></p><p class="c0"><span>Once that is done, make sure ntp is running:</span></p><p class="c1 c0"><span></span></p><p class="c0"><span># ps aux | grep ntpd</span></p><p class="c0"><span>ntp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7596&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4424&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1384&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ss&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jun27&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0:01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/usr/sbin/ntpd -p /var/run/ntpd.pid -g -u 119:128</span></p><p class="c1 c0"><span></span></p><p class="c0"><span>If you don&rsquo;t see it running, start it up:</span></p><p class="c0"><span># /etc/init.d/ntp start</span></p><p class="c0"><span>&nbsp;* Starting NTP server ntpd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ &nbsp;ok &nbsp;]</span></p><p class="c1 c0"><span></span></p><p class="c0"><span>Now time to get that code from google:</span></p><p class="c1 c0"><span></span></p><p class="c0"><span>I put stuff in the swap system just to keep things clean</span></p><p class="c1 c0"><span></span></p><p class="c0"><span># hg clone https://google-authenticator.googlecode.com/hg/ /tmp/google_auth/</span></p><p class="c0"><span># cd /tmp/google_auth/</span></p><p class="c0"><span># make</span></p><p class="c0"><span># make install</span></p><p class="c1 c0"><span></span></p><p class="c0"><span class="c2">Step 3 - System Configuration</span></p><p class="c0"><span>Alright so now the fun part, configuration. This will require CLI text editor skills (cause if you run a GUI on a server, then you should get shot... yes that includes Microsoft Server Admins). I personally use vi because I know how to use it as it&rsquo;s full potential, if you are unsure of what to use then just stick with nano or any GUI base editors (grr...)</span></p><p class="c1 c0"><span></span></p><p class="c0"><span># vi /etc/pam.d/sshd</span></p><p class="c1 c0"><span></span></p><p class="c0"><span>Add the following lines anywhere in the file (to keep it clean, I added them at the bottom with a comment above them stating what these are):</span></p><p class="c1 c0"><span></span></p><p class="c0"><span>auth required pam_sepermit.so</span></p><p class="c0"><span>auth required pam_google_authenticator.so</span></p><p class="c0"><span>auth include &nbsp;password-auth</span></p><p class="c1 c0"><span></span></p><p class="c0"><span>Also... if you peak around the the /etc/pam.d folder, you&rsquo;ll notice other config files for other services such as gdm and gdm-screensaver. You pretty much just have to add the same lines as above in the other configs. </span><span class="c2">WARNING: Please test this out with ssh BEFORE locking yourself out with gdm... I will not be help responsible if you have to re-install your server...</span></p><p class="c1 c0"><span></span></p><p class="c0"><span># vi /etc/ssh/sshd_config</span></p><p class="c1 c0"><span></span></p><p class="c0"><span>Change the following two options to &lsquo;yes&rsquo;:</span></p><p class="c1 c0"><span></span></p><p class="c0"><span class="c2">UsePAM </span><span>and </span><span class="c2">ChallengeResponseAuthentication</span></p><p class="c1 c0"><span class="c2"></span></p><p class="c0"><span># /etc/init.d/ssh restart</span></p><p class="c1 c0"><span></span></p><p class="c0"><span>Now you need to verify if the </span><span class="c6">/etc/pam.d/password-auth</span><span>&nbsp;exists. If it doesn&rsquo;t please do the following:</span></p><p class="c1 c0"><span></span></p><p class="c0"><span># ln -s /etc/pam.d/common-password /etc/pam.d/password-auth</span></p><p class="c1 c0"><span></span></p><p class="c0"><span>I will be honest, I have no clue why but that works. Without it, I would get the following errors in my /var/log/auth.log when I would try to log in:</span></p><p class="c1 c0"><span></span></p><p class="c0"><span>Jun 27 03:44:22 Drake sshd[6378]: PAM _pam_load_conf_file: unable to open /etc/pam.d/password-auth</span></p><p class="c1 c0"><span></span></p><p class="c0"><span>Googling the problem didn&rsquo;t work out too well so I did a bit of experimenting and noticed the common-password file in the /etc/pam.d/ directory, so i tried it out and it worked like a charm.</span></p><p class="c1 c0"><span></span></p><p class="c0"><span class="c2">Step 4 - Wrapping it all up</span></p><p class="c0"><span>Alright so here&rsquo;s the fun part. </span></p><p class="c1 c0"><span></span></p><p class="c0"><span># google-authenticator</span></p><p class="c0"><span>https://www.google.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth://totp/user@server%3Fsecret%G7RCP64T5VZAVWAIY</span></p><p class="c0"><span>Your new secret key is: G7RCP64T5VZAVWAIY</span></p><p class="c0"><span>Your verification code is 484046</span></p><p class="c0"><span>Your emergency scratch codes are:</span></p><p class="c0"><span>&nbsp; 24994213</span></p><p class="c0"><span>&nbsp; 46123453</span></p><p class="c0"><span>&nbsp; 45921324</span></p><p class="c0"><span>&nbsp; 48612031</span></p><p class="c0"><span>&nbsp; 97456421</span></p><p class="c0"><span>Do you want me to update your &quot;~/.google_authenticator&quot; file (y/n) </span><span class="c2">y</span></p><p class="c0"><span>Do you want to disallow multiple uses of the same authentication</span></p><p class="c0"><span>token? This restricts you to one login about every 30s, but it increases</span></p><p class="c0"><span>your chances to notice or even prevent man-in-the-middle attacks (y/n) </span><span class="c2">y</span></p><p class="c0"><span>By default, tokens are good for 30 seconds and in order to compensate for</span></p><p class="c0"><span>possible time-skew between the client and the server, we allow an extra</span></p><p class="c0"><span>token before and after the current time. If you experience problems with poor</span></p><p class="c0"><span>time synchronization, you can increase the window from its default</span></p><p class="c0"><span>size of 1:30min to about 4min. Do you want to do so (y/n) </span><span class="c2">n</span></p><p class="c0"><span>If the computer that you are logging into isn&#39;t hardened against brute-force</span></p><p class="c0"><span>login attempts, you can enable rate-limiting for the authentication module.</span></p><p class="c0"><span>By default, this limits attackers to no more than 3 login attempts every 30s.</span></p><p class="c0"><span>Do you want to enable rate-limiting (y/n) </span><span class="c2">y</span></p><p class="c0"><span>#</span></p><p class="c1 c0"><span></span></p><p class="c0"><span>Open the google-authenticator app on your smarthphone and tap on menu -&gt; Scan account barcode. Scan the code either via the link or from your monitor if you installed the QR Encoder libraries.</span></p><p class="c0"><span><br>You&rsquo;re done. Now to test it out:</span></p><p class="c1 c0"><span></span></p><p class="c0"><span># ssh 127.8.9.0</span></p><p class="c0"><span>Password:</span></p><p class="c0"><span>Verification code:</span></p><p class="c0"><span>Linux Drake 2.6.32-32-generic #62-Ubuntu SMP Wed Apr 20 21:54:21 UTC 2011 i686 GNU/Linux Ubuntu 10.04.2 LTS</span></p><p class="c1 c0"><span></span></p><p class="c0"><span>Welcome to Ubuntu!</span></p><p class="c0"><span>&nbsp;* Documentation: &nbsp;</span><span class="c7"><a class="c5" href="https://help.ubuntu.com/">https://help.ubuntu.com/</a></span></p><p class="c1 c0"><span></span></p><p class="c0"><span>root@Drake:~#</span></p><p class="c1 c0"><span></span></p><p class="c0"><span>Looking good! =)</span></p><p class="c1 c0"><span></span></p>
+																</TD>
+															</TR>
+														</TABLE>
+													</TD>
+												</TR>
+											</TABLE>
+										</TD>
+									</TR>
+									<TR>
+										<TD COLSPAN="2">
+											<BR>
+										</TD>
+									</TR>
+								</TABLE>
+								
+								<CENTER>
+									<a href="http://www.linuxfoundation.org/20th" target="_blank"><img src="http://www.linuxfoundation.org/20th/images/lf_linux20_webbadge.png"	width="300" height="250" alt="I'll be celebrating 20 years of Linux with The Linux Foundation!" border="0"></a>
+								</CENTER>
+								
+								<TR>
+									<TD COLSPAN="2">
+										<BR>
+									</TD>
+								</TR>
+						</TD>
+					</TR>
+				</TABLE>
+		</CENTER>
+</HTML>
